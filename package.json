@@ -1,0 +1,32 @@
+{
+  "name": "template-bdds-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "getlibs": "npm install && cd pl-saas-web-bdd-steps && npm install --registry https://verdaccio.pl-labs.com/  && npm install && cd .. && cd pl-api-bdd-steps && npm install --registry https://verdaccio.pl-labs.com/ && npm install",
+    "test": "cucumber-js --retry 3 --parallel 6 --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json -t \"not @skip\"",
+    "test-all": "cucumber-js --retry 3 --parallel 6 --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json || exit 0",
+    "local-test": "cucumber-js --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json",
+    "test-va": "cucumber-js --retry 3 --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json -t \"not @skip\" || exit 0",
+    "sync": "git submodule init && git submodule update --remote && git submodule foreach git pull origin master && cd pl-saas-web-bdd-steps && git submodule init && git submodule update --remote && git submodule foreach git pull origin master",
+    "posttest": "node -e 'require(\"pl-assertthat-api\").assertThat.uploadReport()'",
+    "build-image": "docker build -t 'printerlogic/qm-ui-bdd-tests:latest' ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/printerlogicDev/template-bdds-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/printerlogicDev/template-bdds-tests/issues"
+  },
+  "dependencies": {
+    "chrome": "^0.1.0",
+    "cucumber": "^7.0.0-rc.0",
+    "pl-assertthat-api": "latest"
+  },
+  "homepage": "https://bitbucket.org/printerlogicDev/template-bdds-tests#readme"
+}
