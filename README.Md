@@ -9,7 +9,11 @@ Use this template to create a new module of the node js framework to test a new 
 
 ## Installation
 
-1.- Create a new repository in Bitbucket
+1.- Create a new repository in Bitbucket using following naming convention:
+
+```bash
+  <PROJECT-NAME>-BDDS-TESTS
+```
 
 2.- Create a new folder locally
 
