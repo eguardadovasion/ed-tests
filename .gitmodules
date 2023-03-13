@@ -1,6 +1,6 @@
 [submodule "pl-saas-web-bdd-steps"]
 	path = pl-saas-web-bdd-steps
-	url = git@bitbucket.org:printerlogicDev/pl-saas-web-bdd-steps.git
+	url = git@github.com:PrinterLogic/pl-saas-web-bdd-steps.git
 [submodule "pl-api-bdd-steps"]
 	path = pl-api-bdd-steps
-	url = git@bitbucket.org:printerlogicDev/pl-api-bdd-steps.git
+	url = git@github.com:PrinterLogic/pl-api-bdd-steps.git
