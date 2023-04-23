@@ -4,7 +4,18 @@
 🤖 Welcome to the BDDs Automation Repository template! This template is designed to help you create a new module for the Node.js framework that can be used to test a new feature.
 
 
-## 🛠️ Project Structure
+## Table of Contents
+
+- [Project Structure](#project-structure)
+- [Installation](#installation)
+- [Environment Variables](#environment-variables)
+- [Running Tests](#running-tests)
+- [Tests Results](#test-results)
+- [Questions](#questions)
+- [Tech Stacks](#tech-stacks)
+- [Features Examples](#examples)
+
+## 🛠️ Project Structure {#project-structure}
 
 ```sh
 
@@ -50,7 +61,7 @@
  `package.json`: This file contains scripts that are used to set up the environment, run tests, and publish the test results. It also lists the dependencies required for the project to function.
 
 
-## 🛠️ Installation
+## 🛠️ Installation {#installation}
 
 Follow these steps to get started with your new repository:
 
@@ -104,7 +115,7 @@ Once you are connected to the VPN, run the following command to install dependen
 
 
 
-## 🌐 Environment Variables
+## 🌐 Environment Variables {#environment-variables}
 
 To run this project, you will need to add the following environment variables to your .env file
 
@@ -154,7 +165,7 @@ DEFAULT_DOMAIN=API-GW:1.270.2,QM-UI:1.1.323,QMS:1.0.162
 ```
 
 
-## 🏃 Running Tests
+## 🏃 Running Tests {#running-tests}
 
 To run all tests locally, run the following command
 
@@ -168,7 +179,7 @@ There are two scripts available to run tests:
 
 - `npm run test`: This command runs tests in parallel execution using six processors by default. To use this command, six instances need to be added to the INSTANCE_URL env variable. By default, this command does not use the "@skip" tag. It is mainly used by Github Actions workflows as part of the Continuous Integration and Continuous Deployment (CI/CD) process.
 
-## Test Results
+## Test Results {#test-results}
 
 Once you execute the tests if you want to send the results to Jira run the following command:
 
@@ -178,18 +189,18 @@ Once you execute the tests if you want to send the results to Jira run the follo
 
 This will upload the results to Jira at following link: https://jira.printerlogic.com/projects/PI?selectedItem=com.assertthat:assertthat-project-report-overview&projectId=10600 with the name given in DEFAULT_DOMAIN env variable.
 
-## ❓ Questions
+## ❓ Questions {#questions}
 
 If you have any question, please reach out to eduardo.guardado@vasion.com
 
 
-## 🛡️ Tech Stack
+## 🛡️ Tech Stack {#tech-stacks}
 
 **Client:** NodeJS, Cucumber, JavaScript, Selenium
 
 
 
-## 📚 Feature/Examples
+## 📚 Feature/Examples {#examples)}
 
 ```javascript
 Feature: Quota Management settings
