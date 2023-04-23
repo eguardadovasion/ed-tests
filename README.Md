@@ -26,14 +26,14 @@ Use this template to create a new module of the node js framework to test a new 
 
 
 ```bash
-  git clone git@bitbucket.org:printerlogicDev/template-bdds-tests.git .
+  git clone git@github.com:PrinterLogic/template-bdd-tests.git .
 ```
 
 4.- Copy the url of the new repository created in step 1 and set as remote url for this project.
 
 
 ```bash
-  git remote set-url origin git@bitbucket.org:printerlogicDev/<newproject>-bdds-tests.git
+  git remote set-url origin git@github.com:PrinterLogic/<project_name>-bdd-tests.git
 ```
 
 5.- Run this command to ensure the remote url is set correctly.
