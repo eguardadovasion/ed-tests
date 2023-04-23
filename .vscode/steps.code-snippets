@@ -213,23 +213,58 @@
   },
   "Then the following elements are displayed": {
     "prefix": "Then the following elements are displayed",
-    "body": "Then the following elements are displayed"
+    "body": [
+      "   Then the following elements are displayed",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
   },
   "Then the following elements are not displayed": {
     "prefix": "Then the following elements are not displayed",
-    "body": "Then the following elements are not displayed"
+    "body": [
+      "   Then the following elements are not displayed",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
   },
   "Then the following elements do not exist": {
     "prefix": "Then the following elements do not exist",
-    "body": "Then the following elements do not exist"
+    "body": [
+      "   Then the following elements do not exist",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
   },
   "Then wait until the following elements does not exist": {
     "prefix": "Then wait until the following elements does not exist",
-    "body": "Then wait until the following elements does not exist"
+    "body": [
+      "   Then wait until the following elements does not exist",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
   },
   "Then the following elements are enabled": {
     "prefix": "Then the following elements are enabled",
-    "body": "Then the following elements are enabled"
+    "body": [
+      "   Then the following elements are enabled",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
   },
   "Then the element with locator {string} and locator value {string} have text {string}": {
     "prefix": "Then the element with locator {string} and locator value {string} have text {string}",
