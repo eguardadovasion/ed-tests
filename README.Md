@@ -9,7 +9,7 @@
 
 Follow these steps to get started with your new repository:
 
-1.- Create a new repository in Github using following naming convention:
+1.- Create a new repository in Github under PrinterLogic organization https://github.com/PrinterLogic and using following naming convention:
 
 ```bash
   <PROJECT-NAME>-BDDS-TESTS
@@ -49,19 +49,14 @@ Follow these steps to get started with your new repository:
 
 Once you are connected to the VPN, run the following command to install dependencies:
 
+- Dependencies will be installed from 3 sources: Github submodules, npm global registry and npm vasion registry ( https://verdaccio.pl-labs.com/ )
+
 
 ```bash
   npm run setup
 ```
 
 
-## 🏃 Running Tests
-
-To run all tests locally, run the following command
-
-```bash
-  npm run local-test
-```
 
 
 ## 🌐 Environment Variables
@@ -114,6 +109,23 @@ DEFAULT_DOMAIN=API-GW:1.270.2,QM-UI:1.1.323,QMS:1.0.162
 ```
 
 
+## 🏃 Running Tests
+
+To run all tests locally, run the following command
+
+```bash
+  npm run local-test
+```
+
+## Test Results
+
+Once you execute the tests if you want to send the results to Jira run the following command:
+
+```bash
+  npm run publishResults
+```
+
+This will upload the results to Jira at following link: https://jira.printerlogic.com/projects/PI?selectedItem=com.assertthat:assertthat-project-report-overview&projectId=10600 with the name given in DEFAULT_DOMAIN env variable.
 
 ## ❓ Questions
 

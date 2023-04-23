@@ -14,7 +14,8 @@
     "sync3": "cd pl-saas-web-bdd-steps && git submodule init && git submodule update --remote && git submodule foreach git pull origin master",
     "setup": "npm run sync && npm run sync2 && npm run sync3 && npm run getlibs",
     "posttest": "node -e 'require(\"pl-assertthat-api\").assertThat.uploadReport()'",
-    "build-image": "docker build -t 'printerlogic/qm-ui-bdd-tests:latest' ."
+    "build-image": "docker build -t 'printerlogic/qm-ui-bdd-tests:latest' .", 
+    "publishResults": "node -e 'require(\"pl-assertthat-api\").assertThat.uploadReport()'"
   },
   "repository": {
     "type": "git",
