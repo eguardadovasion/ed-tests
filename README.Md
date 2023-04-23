@@ -162,6 +162,12 @@ To run all tests locally, run the following command
   npm run local-test
 ```
 
+There are two scripts available to run tests: 
+
+- `npm run local-test`: This command runs tests without parallel execution and is primarily intended for testing a specific script locally. By adding the tag of a specific scenario to the command, only that script can be executed. For instance, "npm run local-test -- -t @debugTest".
+
+- `npm run test`: This command runs tests in parallel execution using six processors by default. To use this command, six instances need to be added to the INSTANCE_URL env variable. By default, this command does not use the "@skip" tag. It is mainly used by Github Actions workflows as part of the Continuous Integration and Continuous Deployment (CI/CD) process.
+
 ## Test Results
 
 Once you execute the tests if you want to send the results to Jira run the following command:
