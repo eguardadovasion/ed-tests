@@ -1,13 +1,13 @@
 
 # Template for BDDs Automation Repository
 
-Use this template to create a new module of the node js framework to test a new feature.
+🤖 Welcome to the BDDs Automation Repository template! This template is designed to help you create a new module for the Node.js framework that can be used to test a new feature.
 
 
 
+## 🛠️ Installation
 
-
-## Installation
+Follow these steps to get started with your new repository:
 
 1.- Create a new repository in Bitbucket or Github using following naming convention:
 
@@ -26,14 +26,14 @@ Use this template to create a new module of the node js framework to test a new 
 
 
 ```bash
-  git clone git@bitbucket.org:printerlogicDev/template-bdds-tests.git .
+  git clone git@github.com:PrinterLogic/template-bdd-tests.git .
 ```
 
 4.- Copy the url of the new repository created in step 1 and set as remote url for this project.
 
 
 ```bash
-  git remote set-url origin git@bitbucket.org:printerlogicDev/<newproject>-bdds-tests.git
+  git remote set-url origin git@github.com:PrinterLogic/<newproject>-bdds-tests.git
 ```
 
 5.- Run this command to ensure the remote url is set correctly.
@@ -51,7 +51,7 @@ Use this template to create a new module of the node js framework to test a new 
 ```
 
 
-## Running Tests
+## 🏃 Running Tests
 
 To run all tests locally, run the following command
 
@@ -60,7 +60,7 @@ To run all tests locally, run the following command
 ```
 
 
-## Environment Variables
+## 🌐 Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
 
@@ -85,18 +85,18 @@ To run this project, you will need to add the following environment variables to
 `RESULTS_FILE`
 
 
-## Questions
+## ❓ Questions
 
 If you have any question, please reach out to eduardo.guardado@vasion.com
 
 
-## Tech Stack
+## 🛡️ Tech Stack
 
 **Client:** NodeJS, Cucumber, JavaScript, Selenium
 
 
 
-## Feature/Examples
+## 📚 Feature/Examples
 
 ```javascript
 Feature: Quota Management settings
