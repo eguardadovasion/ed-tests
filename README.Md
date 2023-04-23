@@ -33,7 +33,9 @@ Follow these steps to get started with your new repository:
 
 
 ```bash
-  git remote set-url origin git@github.com:PrinterLogic/<newproject>-bdds-tests.git
+
+  git remote set-url origin git@github.com:PrinterLogic/<project_name>-bdd-tests.git
+
 ```
 
 5.- Run this command to ensure the remote url is set correctly.
