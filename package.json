@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "getlibs": "npm install && cd pl-saas-web-bdd-steps && npm install --registry https://verdaccio.pl-labs.com/  && npm install && cd .. && cd pl-api-bdd-steps && npm install --registry https://verdaccio.pl-labs.com/ && npm install",
+    "getlibs": "npm install && npm install pl-assertthat-api --registry https://verdaccio.pl-labs.com/ && cd pl-saas-web-bdd-steps && npm install --registry https://verdaccio.pl-labs.com/  && npm install && cd .. && cd pl-api-bdd-steps && npm install --registry https://verdaccio.pl-labs.com/ && npm install",
     "test": "cucumber-js --retry 3 --parallel 6 --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json -t \"not @skip\"",
     "test-all": "cucumber-js --retry 3 --parallel 6 --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json || exit 0",
     "local-test": "cucumber-js --require pl-saas-web-bdd-steps/definitions --require pl-api-bdd-steps/common-steps -f json:report/cucumber_report.json",
@@ -28,8 +28,7 @@
   },
   "dependencies": {
     "chrome": "^0.1.0",
-    "cucumber": "^7.0.0-rc.0",
-    "pl-assertthat-api": "latest"
+    "cucumber": "^7.0.0-rc.0"
   },
   "homepage": "https://bitbucket.org/printerlogicDev/template-bdds-tests#readme"
 }
