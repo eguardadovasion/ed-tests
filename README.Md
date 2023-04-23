@@ -9,7 +9,7 @@
 
 Follow these steps to get started with your new repository:
 
-1.- Create a new repository in Bitbucket or Github using following naming convention:
+1.- Create a new repository in Github using following naming convention:
 
 ```bash
   <PROJECT-NAME>-BDDS-TESTS
@@ -45,7 +45,9 @@ Follow these steps to get started with your new repository:
   git remote -v
 ```
     
-6.- Run this command to install dependencies.
+6.- Before setting up the environment, make sure you are connected to the VPN. 
+
+Once you are connected to the VPN, run the following command to install dependencies:
 
 
 ```bash
@@ -66,25 +68,51 @@ To run all tests locally, run the following command
 
 To run this project, you will need to add the following environment variables to your .env file
 
-`INSTANCE_URL`
+### Instance configuration
 
-`DEFAULT_USER`
+`INSTANCE_URL`: The URL of the instance to be tested. For example: https://edtesting.gw.service.pl-labs.com/. If you want to run in parallel against multiple instances you can add up to 6 instances comma separated. For example: https://edtesting.gw.service.pl-labs.com/, https://auto.gw.service.pl-labs.com/, https://auto2.gw.service.pl-labs.com/, https://auto4.gw.service.pl-labs.com/, https://auto5.gw.service.pl-labs.com/, https://qmnew.gw.service.pl-labs.com/, https://qm-ed.gw.service.pl-labs.com/, https://newqm.gw.service.pl-labs.com/
 
-`DEFAULT_PASSWORD`
+`DEFAULT_USER`: The username of the default user to be used for testing. For example: root.
 
-`DEFAULT_DOMAIN`
+`DEFAULT_PASSWORD`: The password of the default user to be used for testing. For example: password1.
 
-`CHROME_HEADLESS`
+### Selenium server configuration
 
-`SELENIUM_REMOTE_URL`
+`CHROME_HEADLESS`: Set this variable to true to run tests in headless mode, or false to run in normal mode. For example: true. 
+#### WARNING: CHROME_HEADLESS is not currently functional. Uncomment the following line to run without headless mode.
+#### CHROME_HEADLESS=false
 
-`JIRA_SERVER`
 
-`JIRA_PROJECT_ID`
+`SELENIUM_REMOTE_URL`: The URL of the Selenium server to be used for remote testing. For example: http://localhost:4444/wd/hub.
 
-`JIRA_API_KEY`
+### Jira Assert that plug in
 
-`RESULTS_FILE`
+`JIRA_SERVER`:The URL of the JIRA server to be used for logging test results. For example: https://jira.printerlogic.com.
+
+`JIRA_PROJECT_ID`: The ID of the JIRA project to be used for logging bugs. For example: 10600.
+
+`JIRA_API_KEY`: The API key to be used for accessing the JIRA server. For example: myjiraapikey.
+
+`DEFAULT_DOMAIN`: The name of the exection to display in Jira results. For example: IDP-VERSION-2.
+
+`RESULTS_FILE`: The name of the file where the test results are stored locally. For example: "report/cucumber_report.json". These are the results that will be send to Jira and only json files are supported.
+
+
+Here's an example .env file:
+
+```
+INSTANCE_URL=https://edtesting.gw.service.pl-labs.com/
+DEFAULT_USER=root
+DEFAULT_PASSWORD=password1
+CHROME_HEADLESS=true
+SELENIUM_REMOTE_URL=http://ec2qa-selenium5.printerlogic.local:4444/wd/hub
+JIRA_SERVER=https://jira.printerlogic.com
+JIRA_PROJECT_ID=10600
+JIRA_API_KEY=<jirauser:password@base64encode>
+RESULTS_FILE="report/cucumber_report.json"
+DEFAULT_DOMAIN=API-GW:1.270.2,QM-UI:1.1.323,QMS:1.0.162
+```
+
 
 
 ## ❓ Questions
