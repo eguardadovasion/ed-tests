@@ -31,7 +31,7 @@
 
  `.vscode/`: This folder contains code snippets for feature files, which are used in the Visual Studio Code (VS Code) integrated development environment (IDE) to suggest autocompletion for feature steps.
 
- `features/`: This folder will contains the feature files for the feature that is being tested. The feature files define the behavior and requirements for a specific feature.
+ `features/`: This folder will contains the feature files for the feature that is being tested. The feature files define the behavior and requirements for a specific feature. Each project have their own feature files. For example: https://github.com/PrinterLogic/qm-ui-bdd-tests/tree/master/features 
 
  `pl-api-bdd-steps/`: This folder is a submodule that contains functions and methods used to perform actions against the Printerlogic APIs. These steps are written in a Behavior-Driven Development (BDD) style and are used in conjunction with the feature files to test the functionality of the APIs.
 
