@@ -4,6 +4,51 @@
 🤖 Welcome to the BDDs Automation Repository template! This template is designed to help you create a new module for the Node.js framework that can be used to test a new feature.
 
 
+## 🛠️ Project Structure
+
+```sh
+
+├── .vscode
+│   └── steps.code-snippets
+├── features/
+│   ├── template.feature
+├── pl-api-bdd-steps/
+│   ├── submodule content
+├── pl-saas-web-bdd-steps/
+│   ├── submodule content
+├── report/
+│   ├── cucumber_report.json
+│── .env
+│── .gitignore
+│── .gitmodules
+│── .npmrc
+│── .package.json
+
+```
+
+
+
+
+ `.vscode/`: This folder contains code snippets for feature files, which are used in the Visual Studio Code (VS Code) integrated development environment (IDE) to suggest autocompletion for feature steps.
+
+ `features/`: This folder will contains the feature files for the feature that is being tested. The feature files define the behavior and requirements for a specific feature.
+
+ `pl-api-bdd-steps/`: This folder is a submodule that contains functions and methods used to perform actions against the Printerlogic APIs. These steps are written in a Behavior-Driven Development (BDD) style and are used in conjunction with the feature files to test the functionality of the APIs.
+
+ `pl-saas-web-bdd-steps/`: This folder is also a submodule that contains functions and methods used to interact with a website, specifically Printerlogic's self-service portal and admin console. These steps are also written in a BDD style and are used in conjunction with the feature files to test the functionality of the website.
+
+ `report/`: This folder is where the test results are stored by default. The test results include information about the status of the tests, any errors or failures that occurred, screenshots and any other relevant information.
+
+ `.env`: This file is used to configure the environment variables required to run this project. Environment variables are used to store sensitive information such as passwords and API keys.
+
+ `.gitignore`: This file lists the files and folders that should not be pushed to GitHub. These files are typically temporary or generated files that are not necessary for the project to function.
+
+ `.gitmodules`: This file contains the configuration of the URLs for the submodules used in this project.
+
+ `.npmrc`: This file is used to register global and internal npm registries to use when installing dependencies for this project.
+
+ `package.json`: This file contains scripts that are used to set up the environment, run tests, and publish the test results. It also lists the dependencies required for the project to function.
+
 
 ## 🛠️ Installation
 
