@@ -1,0 +1,427 @@
+{
+  "Given a user opens the page {string}": {
+    "prefix": "Given a user opens the page {string}",
+    "body": "Given a user opens the page {string}"
+  },
+  "Given a user opens admin console": {
+    "prefix": "Given a user opens admin console",
+    "body": "Given a user opens admin console"
+  },
+  "Given a user log in to admin console and get the session id": {
+    "prefix": "Given a user log in to admin console and get the session id",
+    "body": "Given a user log in to admin console and get the session id"
+  },
+  "Given a user log in to admin console with specific user and get the session id": {
+    "prefix": "Given a user log in to admin console with specific user and get the session id",
+    "body": "Given a user log in to admin console with specific user and get the session id"
+  },
+  "Given chrome extension installed": {
+    "prefix": "Given chrome extension installed",
+    "body": "Given chrome extension installed"
+  },
+  "Given a user log in to self service portal and get the session id": {
+    "prefix": "Given a user log in to self service portal and get the session id",
+    "body": "Given a user log in to self service portal and get the session id"
+  },
+  "Given a printer with name {string} is deleted if it exists": {
+    "prefix": "Given a printer with name {string} is deleted if it exists",
+    "body": "Given a printer with name {string} is deleted if it exists"
+  },
+  "When log in to admin portal": {
+    "prefix": "When log in to admin portal",
+    "body": "When log in to admin portal"
+  },
+  "When log out from admin portal": {
+    "prefix": "When log out from admin portal",
+    "body": "When log out from admin portal"
+  },
+  "When log out from self service portal": {
+    "prefix": "When log out from self service portal",
+    "body": "When log out from self service portal"
+  },
+  "When implicitely wait {string}": {
+    "prefix": "When implicitely wait {string}",
+    "body": "When implicitely wait {string}"
+  },
+  "When clicks in the printer id {string}": {
+    "prefix": "When clicks in the printer id {string}",
+    "body": "When clicks in the printer id {string}"
+  },
+  "When clicks on the printer with name {string}": {
+    "prefix": "When clicks on the printer with name {string}",
+    "body": "When clicks on the printer with name {string}"
+  },
+  "When navigates to the {string} tab of the printer": {
+    "prefix": "When navigates to the {string} tab of the printer",
+    "body": "When navigates to the {string} tab of the printer"
+  },
+  "When multiselect from printer id {string} to printer id {string}": {
+    "prefix": "When multiselect from printer id {string} to printer id {string}",
+    "body": "When multiselect from printer id {string} to printer id {string"
+  },
+  "When creates a printer with id {string} and address {string}": {
+    "prefix": "When creates a printer with id {string} and address {string}",
+    "body": "When creates a printer with id {string} and address {string}"
+  },
+  "When close the browser": {
+    "prefix": "When close the browser",
+    "body": "When close the browser"
+  },
+  "When get the session id": {
+    "prefix": "When get the session id",
+    "body": "When get the session id"
+  },
+  "When user select any printer and click in download qr code": {
+    "prefix": "When user select any printer and click in download qr code",
+    "body": "When user select any printer and click in download qr code"
+  },
+  "When user navigates to General Tab in Settings": {
+    "prefix": "When user navigates to General Tab in Settings",
+    "body": "When user navigates to General Tab in Settings"
+  },
+  "When user navigates to My Account": {
+    "prefix": "When user navigates to My Account",
+    "body": "When user navigates to My Account"
+  },
+  "When user navigates to Quota Management": {
+    "prefix": "When user navigates to Quota Management",
+    "body": "When user navigates to Quota Management"
+  },
+  "When user navigates to Quota Management Reports": {
+    "prefix": "When user navigates to Quota Management Reports",
+    "body": "When user navigates to Quota Management Reports"
+  },
+  "When clicks in the first future time period": {
+    "prefix": "When clicks in the first future time period",
+    "body": "When clicks in the first future time period"
+  },
+  "When clicks in the last future time period": {
+    "prefix": "When clicks in the last future time period",
+    "body": "When clicks in the last future time period"
+  },
+  "When navigates to {string} in the admin console": {
+    "prefix": "When navigates to {string} in the admin console",
+    "body": "When navigates to {string} in the admin console"
+  },
+  "When click the apps tab save button": {
+    "prefix": "When click the apps tab save button",
+    "body": "When click the apps tab save button"
+  },
+  "When sets the manufacturer to {string}": {
+    "prefix": "When sets the manufacturer to {string}",
+    "body": "When sets the manufacturer to {string}"
+  },
+  "When enables scanning on the printer": {
+    "prefix": "When enables scanning on the printer",
+    "body": "When enables scanning on the printer"
+  },
+  "When clicks the printer-specific radio button": {
+    "prefix": "When clicks the printer-specific radio button",
+    "body": "When clicks the printer-specific radio button"
+  },
+  "When the printer-specific {string} dropdown is set to {string}": {
+    "prefix": "When the printer-specific {string} dropdown is set to {string}",
+    "body": "When the printer-specific {string} dropdown is set to {string}"
+  },
+  "When {string} the printer-specific {string} override checkbox": {
+    "prefix": "When {string} the printer-specific {string} override checkbox",
+    "body": "When {string} the printer-specific {string} override checkbox"
+  },
+  "Then the user name input is displayed": {
+    "prefix": "Then the user name input is displayed",
+    "body": "Then the user name input is displayed"
+  },
+  "Then the download qr button is displayed": {
+    "prefix": "Then the download qr button is displayed",
+    "body": "Then the download qr button is displayed"
+  },
+  "Then the download qr codes button is displayed and enabled": {
+    "prefix": "Then the download qr codes button is displayed and enabled",
+    "body": "Then the download qr codes button is displayed and enabled"
+  },
+  "Then the download qr codes button is displayed and disabled": {
+    "prefix": "Then the download qr codes button is displayed and disabled",
+    "body": "Then the download qr codes button is displayed and disabled"
+  },
+  "Then the download qr codes button tool tip match {string}": {
+    "prefix": "Then the download qr codes button tool tip match {string}",
+    "body": "Then the download qr codes button tool tip match {string}"
+  },
+  "Then the Account Summary is displayed": {
+    "prefix": "Then the Account Summary is displayed",
+    "body": "Then the Account Summary is displayed"
+  },
+  "Then the About page is displayed": {
+    "prefix": "Then the About page is displayed",
+    "body": "Then the About page is displayed"
+  },
+  "Then a new tab opens with the title {string}": {
+    "prefix": "Then a new tab opens with the title {string}",
+    "body": "Then a new tab opens with the title {string}"
+  },
+  "Then a new tab opens with the url {string}": {
+    "prefix": "Then a new tab opens with the url {string}",
+    "body": "Then a new tab opens with the url {string}"
+  },
+  "Then the default settings match the global settings": {
+    "prefix": "Then the default settings match the global settings",
+    "body": "Then the default settings match the global settings"
+  },
+  "Then the printer-specific {string} dropdown value is {string}": {
+    "prefix": "Then the printer-specific {string} dropdown value is {string}",
+    "body": "Then the printer-specific {string} dropdown value is {string}"
+  },
+  "Then the printer-specific {string} override checkbox is {string}": {
+    "prefix": "Then the printer-specific {string} override checkbox is {string}",
+    "body": "Then the printer-specific {string} override checkbox is {string}"
+  },
+  "When clicks in the element with locator {string} and locator value {string}": {
+    "prefix": "When clicks in the element with locator {string} and locator value {string}",
+    "body": "When clicks in the element with locator {string} and locator value {string}"
+  },
+  "When enters the text {string} in the element with locator {string} and locator value {string}": {
+    "prefix": "When enters the text {string} in the element with locator {string} and locator value {string}",
+    "body": "When enters the text {string} in the element with locator {string} and locator value {string}"
+  },
+  "When clear current text and type {string} in the element with locator {string} and locator value {string}": {
+    "prefix": "When clear current text and type {string} in the element with locator {string} and locator value {string}",
+    "body": "When clear current text and type {string} in the element with locator {string} and locator value {string}"
+  },
+  "When enters in the element with locator {string} and locator value {string} a date {string} days after the date in the element with locator {string} and locator value {string}": {
+    "prefix": "When enters in the element with locator {string} and locator value {string} a date {string} days after the date in the element with locator {string} and locator value {string}",
+    "body": "When enters in the element with locator {string} and locator value {string} a date {string} days after the date in the element with locator {string} and locator value {string}"
+  },
+  "When enters in the element with locator {string} and locator value {string} a date {string} days before the date in the element with locator {string} and locator value {string}": {
+    "prefix": "When enters in the element with locator {string} and locator value {string} a date {string} days before the date in the element with locator {string} and locator value {string}",
+    "body": "When enters in the element with locator {string} and locator value {string} a date {string} days before the date in the element with locator {string} and locator value {string}"
+  },
+  "When wait for element with locator {string} and locator value {string}": {
+    "prefix": "When wait for element with locator {string} and locator value {string}",
+    "body": "When wait for element with locator {string} and locator value {string}"
+  },
+  "When wait for element with locator {string} and locator value {string} is not visible": {
+    "prefix": "When wait for element with locator {string} and locator value {string} is not visible",
+    "body": "When wait for element with locator {string} and locator value {string} is not visible"
+  },
+  "When press back_space key {int} times in the element with locator {string} and locator value {string}": {
+    "prefix": "When press back_space key {int} times in the element with locator {string} and locator value {string}",
+    "body": "When press back_space key {int} times in the element with locator {string} and locator value {string}"
+  },
+  "Then the page title is {string}": {
+    "prefix": "Then the page title is {string}",
+    "body": "Then the page title is {string}"
+  },
+  "Then the following elements are displayed": {
+    "prefix": "Then the following elements are displayed",
+    "body": [
+      "   Then the following elements are displayed",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
+  },
+  "Then the following elements are not displayed": {
+    "prefix": "Then the following elements are not displayed",
+    "body": [
+      "   Then the following elements are not displayed",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
+  },
+  "Then the following elements do not exist": {
+    "prefix": "Then the following elements do not exist",
+    "body": [
+      "   Then the following elements do not exist",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
+  },
+  "Then wait until the following elements does not exist": {
+    "prefix": "Then wait until the following elements does not exist",
+    "body": [
+      "   Then wait until the following elements does not exist",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
+  },
+  "Then the following elements are enabled": {
+    "prefix": "Then the following elements are enabled",
+    "body": [
+      "   Then the following elements are enabled",
+      "     | Locator           | Locator_Value\t                           |",
+      "     | ${1:xpath}    \t\t| //${2:}                             \t\t\t\t|",
+      "     | ${3:}         \t\t| ${4:}                               \t\t\t\t|",
+      "     | ${5:}         \t\t| ${6:}                               \t\t\t\t|",
+      "     | ${7:}         \t\t| ${8:}                               \t\t\t\t|"
+    ]
+  },
+  "Then the element with locator {string} and locator value {string} have text {string}": {
+    "prefix": "Then the element with locator {string} and locator value {string} have text {string}",
+    "body": "Then the element with locator {string} and locator value {string} have text {string}"
+  },
+  "Then the table with locator {string} and locator value {string} is not empty": {
+    "prefix": "Then the table with locator {string} and locator value {string} is not empty",
+    "body": "Then the table with locator {string} and locator value {string} is not empty"
+  },
+  "Then the table with locator {string} and locator value {string} is empty": {
+    "prefix": "Then the table with locator {string} and locator value {string} is empty",
+    "body": "Then the table with locator {string} and locator value {string} is empty"
+  },
+  "Then the table with locator {string} and locator value {string} contains {string} table row": {
+    "prefix": "Then the table with locator {string} and locator value {string} contains {string} table row",
+    "body": "Then the table with locator {string} and locator value {string} contains {string} table row"
+  },
+  "Then an alert pops up with a message containing {string}": {
+    "prefix": "Then an alert pops up with a message containing {string}",
+    "body": "Then an alert pops up with a message containing {string}"
+  },
+  "Then {string} the alert": {
+    "prefix": "Then {string} the alert",
+    "body": "Then {string} the alert"
+  },
+  "Given url {string}": {
+    "prefix": "Given url {string}",
+    "body": "Given url {string}"
+  },
+  "Given default gw instance url with path {string}": {
+    "prefix": "Given default gw instance url with path {string}",
+    "body": "Given default gw instance url with path {string}"
+  },
+  "Given a valid session id on default instance and credentials": {
+    "prefix": "Given a valid session id on default instance and credentials",
+    "body": "Given a valid session id on default instance and credentials"
+  },
+  "Given default instance url with path {string}": {
+    "prefix": "Given default instance url with path {string}",
+    "body": "Given default instance url with path {string}"
+  },
+  "Given default instance dont have api keys created": {
+    "prefix": "Given default instance dont have api keys created",
+    "body": "Given default instance dont have api keys created"
+  },
+  "Given default instance have at least one api key created": {
+    "prefix": "Given default instance have at least one api key created",
+    "body": "Given default instance have at least one api key created"
+  },
+  "Given scan settings are set back to default": {
+    "prefix": "Given scan settings are set back to default",
+    "body": "Given scan settings are set back to default"
+  },
+  "Then response status code {string}": {
+    "prefix": "Then response status code {string}",
+    "body": "Then response status code {string}"
+  },
+  "Then display response": {
+    "prefix": "Then display response",
+    "body": "Then display response"
+  },
+  "Then response contains client_secret": {
+    "prefix": "Then response contains client_secret",
+    "body": "Then response contains client_secret"
+  },
+  "Then response does not contains client_secret": {
+    "prefix": "Then response does not contains client_secret",
+    "body": "Then response does not contains client_secret"
+  },
+  "Then the google code is displayed": {
+    "prefix": "Then the google code is displayed",
+    "body": "Then the google code is displayed"
+  },
+  "Then the element with locator {string} and locator value {string} contains some text": {
+    "prefix": "Then the element with locator {string} and locator value {string} contains some text",
+    "body": "Then the element with locator {string} and locator value {string} contains some text"
+  },
+  "Then the response contains {string}": {
+    "prefix": "Then the response contains {string}",
+    "body": "Then the response contains {string}"
+  },
+  "When header": { "prefix": "When header", "body": "When header" },
+  "When query parameters": {
+    "prefix": "When query parameters",
+    "body": "When query parameters"
+  },
+  "When data": { "prefix": "When data", "body": "When data" },
+  "When body form data": {
+    "prefix": "When body form data",
+    "body": "When body form data"
+  },
+  "When method {string}": {
+    "prefix": "When method {string}",
+    "body": "When method {string}"
+  },
+  "When quota management is set to custom time period": {
+    "prefix": "When quota management is set to custom time period",
+    "body": "When quota management is set to custom time period"
+  },
+  "When quota management is disable": {
+    "prefix": "When quota management is disable",
+    "body": "When quota management is disable"
+  },
+  "When quota management is enable": {
+    "prefix": "When quota management is enable",
+    "body": "When quota management is enable"
+  },
+  "When delete future qm time periods": {
+    "prefix": "When delete future qm time periods",
+    "body": "When delete future qm time periods"
+  },
+  "When take note of client_secret": {
+    "prefix": "When take note of client_secret",
+    "body": "When take note of client_secret"
+  },
+  "When take note of server_secret": {
+    "prefix": "When take note of server_secret",
+    "body": "When take note of server_secret"
+  },
+  "When take note of id_token": {
+    "prefix": "When take note of id_token",
+    "body": "When take note of id_token"
+  },
+  "When take note of google auth parameters required": {
+    "prefix": "When take note of google auth parameters required",
+    "body": "When take note of google auth parameters required"
+  },
+  "When user opens the page {string}": {
+    "prefix": "When user opens the page {string}",
+    "body": "When user opens the page {string}"
+  },
+  "When user opens the page {string} with query parameters": {
+    "prefix": "When user opens the page {string} with query parameters",
+    "body": "When user opens the page {string} with query parameters"
+  },
+  "When click the element with locator {string} and locator value {string}": {
+    "prefix": "When click the element with locator {string} and locator value {string}",
+    "body": "When click the element with locator {string} and locator value {string}"
+  },
+  "When implicitly wait {string}": {
+    "prefix": "When implicitly wait {string}",
+    "body": "When implicitly wait {string}"
+  },
+  "When type {string} in element with locator {string} and locator value {string}": {
+    "prefix": "When type {string} in element with locator {string} and locator value {string}",
+    "body": "When type {string} in element with locator {string} and locator value {string}"
+  },
+  "When obtain the google code and request uri for desktop": {
+    "prefix": "When obtain the google code and request uri for desktop",
+    "body": "When obtain the google code and request uri for desktop"
+  },
+  "When take note of the google code": {
+    "prefix": "When take note of the google code",
+    "body": "When take note of the google code"
+  },
+  "When take note of the value in the element with locator {string} and locator value {string}": {
+    "prefix": "When take note of the value in the element with locator {string} and locator value {string}",
+    "body": "When take note of the value in the element with locator {string} and locator value {string}"
+  }
+}
