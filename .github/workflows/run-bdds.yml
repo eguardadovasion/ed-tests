@@ -1,0 +1,153 @@
+name: Run Tests
+
+
+on:
+  schedule:
+      - cron: '8 0 * * *' 
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: Select the environment
+
+env:
+  PI: true
+
+jobs:
+  
+  identity_regression_tests:
+    
+    runs-on: 
+      group: team-identity-itservices
+    environment: ${{ github.event.inputs.environment || 'STAGE' }}
+
+    env:
+      environment: ${{ github.event.inputs.environment || 'STAGE' }}
+      INSTANCE_URL: ${{ vars.INSTANCE_URL }}
+      okta_user: ${{ vars.OKTA_USER }}
+      okta_password: ${{ secrets.okta_password }}
+      okta_group_user: ${{ vars.OKTA_GROUP_USER }}
+      okta_group_password: ${{ secrets.okta_group_password }}
+      pl_okta_group_user: ${{ vars.PL_OKTA_GROUP_USER }}
+      pl_okta_group_password: ${{ secrets.pl_okta_group_password }}
+      VASION_INSTANCE_URL: ${{ vars.VASION_INSTANCE_URL }}
+      OKTA_VASION_USER: ${{ vars.OKTA_VASION_USER }}
+      OKTA_VASION_PASSWORD: ${{ secrets.vasion_okta_password }}
+      PL_GROUP_INSTANCE: ${{ vars.PL_GROUP_INSTANCE }}
+      PL_OKTA_GROUP_INSTANCE: ${{ vars.PL_OKTA_GROUP_INSTANCE }}
+      GOOGLE_INSTANCE_URL:  ${{ vars.GOOGLE_INSTANCE_URL }}
+      OKTA_GROUP_UNIFIED_INSTANCE: ${{ vars.OKTA_GROUP_UNIFIED_INSTANCE }}
+      GOOGLE_USER:   ${{ secrets.google_user }}
+      GOOGLE_PASSWORD:   ${{ secrets.google_password }}
+      GOOGLE_GROUP_USER: ${{ vars.GOOGLE_GROUP_USER }}
+      GOOGLE_GROUP_PASSWORD: ${{ secrets.google_group_password }}
+      GOOGLE_VASION_USER: ${{ vars.GOOGLE_VASION_USER }}
+      GOOGLE_VASION_PASSWORD: ${{ secrets.GOOGLE_VASION_PASSWORD }}
+      GOOGLE_GROUP_INSTANCE: ${{ vars.GOOGLE_GROUP_INSTANCE }}
+      GOOGLE_VASION_INSTANCE: ${{ vars.GOOGLE_VASION_INSTANCE }}
+      AZURE_INSTANCE_URL:  ${{ vars.AZURE_INSTANCE_URL }}
+      AZURE_USER:   ${{ secrets.azure_user }}
+      AZURE_PASSWORD:   ${{ secrets.azure_password }}
+      AZURE_VASION_USER: ${{ vars.AZURE_VASION_USER }}
+      AZURE_GROUP_USER: ${{ vars.AZURE_GROUP_USER }}
+      UNIFIED_INSTANCE:  ${{ vars.UNIFIED_INSTANCE }}
+      JIRA_API_KEY: ${{ secrets.JIRA_API_KEY }}
+      JIRA_PROJECT_ID: "10015"
+      RESULTS_FILE: "report/cucumber_report.json"
+      TAKE_SCREENSHOTS: "true"
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      passed_scenarios: "0"
+      failed_scenarios: "0"
+      report_link: ""
+      LOCAL_USER: ${{ vars.LOCAL_USER }}
+      LOCAL_PASSWORD: ${{ secrets.LOCAL_PASSWORD }}
+      LDAP_USER: ${{ vars.LDAP_USER }}
+      LDAP_PASSWORD: ${{ secrets.LDAP_PASSWORD }}
+      PL_INSTANCE: ${{ vars.PL_INSTANCE }}
+      VASION_INSTANCE: ${{ vars.VASION_INSTANCE }}
+      UL_INSTANCE: ${{ vars.UL_INSTANCE }}
+
+    outputs:
+        myOutput: ${{ steps.example_step.outputs.myOutput }}
+    steps:
+
+      - uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm run setup
+
+      - name: Run tests
+        id: run_tests
+        run: |
+          $testFilter = if ($env:environment -eq 'STAGE') { "@debug-test-call and not @skip" } else { "@debug-test-call" }
+          echo $testFilter
+          npm run local-test -- -t $testFilter
+
+      - name: Calculate Scenario Results
+        if: always()
+        run: |
+          # Read the content of the Cucumber report file and calculate passed and failed scenarios
+          $jsonContent = Get-Content report/cucumber_report.json | ConvertFrom-Json
+          # Initialize counters for passed and failed scenarios
+          $passedScenarios = 0
+          $failedScenarios = 0
+          
+          # Loop through each object in the array
+          foreach ($item in $jsonContent) {
+              # Loop through each element in the elements array
+              foreach ($element in $item.elements) {
+                  # Initialize a flag for the scenario's status
+                  $scenarioStatus = $true
+                  
+                  # Loop through each step in the steps array
+                  foreach ($step in $element.steps) {
+                      # Check if the step result is failed
+                      if ($step.result.status -eq "failed") {
+                          # If any step fails, set the scenario status to false
+                          $scenarioStatus = $false
+                          break
+                      }
+                  }
+                  
+                  # Increment the corresponding scenario counter based on its status
+                  if ($scenarioStatus) {
+                      $passedScenarios++
+                  } else {
+                      $failedScenarios++
+                  }
+              }
+          }
+          
+          # Output the counts of passed and failed scenarios
+          "passed_scenarios=$passedScenarios", "failed_scenarios=$failedScenarios" | Out-File -FilePath "$env:GITHUB_ENV" -Append
+
+
+      - name: Publish results to Jira
+        if: always()
+        run: |
+          $link = npm run upload "IDP-REGRESSION-TESTS-${{ github.run_id }}"
+          $urlPattern = 'https?://\S+'
+          $url = ($link | Select-String -Pattern $urlPattern).Matches.Value
+          echo "report_link=$url" >> "$env:GITHUB_ENV"
+          echo $url
+
+      - name: Set custom output
+        id: example_step
+        run: |
+         echo "myOutput=Hello, World!" >> "$env:GITHUB_OUTPUT"
+      
+
+      - name: Send Slack notification
+        if: always() && github.event_name == 'schedule'
+        run: |
+          $body = @{
+            message = $env:report_link
+            passed_scenarios = $env:passed_scenarios
+            failed_scenarios = $env:failed_scenarios
+            test_environment = $env:environment
+          } | ConvertTo-Json
+          Invoke-WebRequest -Uri $env:SLACK_WEBHOOK_URL -Method Post -Headers $headers -Body $body
+
+    
+
+    
